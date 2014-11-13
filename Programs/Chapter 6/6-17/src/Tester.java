@@ -17,15 +17,17 @@ public class Tester {
 		System.out.println("This program will display the the cost of jars of jam you bought!");
 		System.out.println("Costs are added out by lb(s)($0.96/lb), by containers($1.44 each), and a $3 service charge");
 		
-		System.out.println("Enter how many jars of Jam you want (1lb 5oz): ");
-		int jam = sc.nextInt();
+		System.out.print("Enter how many jars of Jam you want (1lb 5oz): ");
+		double jars = sc.nextDouble();
 		
-		if (jam / 12 >= 1)
-			System.out.println("You also get " + (jam/12) + " containers which each weigh (1lb 9oz)");
+		if (jars / 12 >= 1)
+			System.out.println("You also get " + ((jars+11)/12) + " containers which each weigh (1lb 9oz)");
 
+		System.out.println("Now to calculate the total cost...");
 		
+		Jam j = new Jam(jars);
 		
-		
+		System.out.printf("\nYour total cost for shipping is $%.2f", j.computeShippingCost());
 	}
 
 }
