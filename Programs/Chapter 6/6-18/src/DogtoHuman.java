@@ -6,7 +6,7 @@ public class DogtoHuman {
 		if (dogYears == 1)
 			return 13;
 		else
-			return (((dogYears-1) * 16) + 13);
+			return (( 16 * (dogYears-1) / 3)  + 13);
 
 	}
 }

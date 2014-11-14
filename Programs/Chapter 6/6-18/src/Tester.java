@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /*
 
 Kevin Leary
@@ -11,9 +12,14 @@ public class Tester {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the age in human years to go to dog years : ");
+		int a = sc.nextInt();
+		
 		DogtoHuman d = new DogtoHuman();
 		
-		System.out.print("The human age of the dog is " + d.convertToHumanAge(1));
+		System.out.println("The human age of the dog is " + d.convertToHumanAge(a));
 
 	}
 
