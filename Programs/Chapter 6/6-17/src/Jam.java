@@ -10,7 +10,7 @@ public class Jam {
 	
 	public double computeShippingCost(){
 		
-		double nCartons = (j + 11) / 12;		//price per carton is 1.44
+		double nCartons = (j + 9) / 10;		//price per carton is 1.44
 		
 		double totOz = (j * 5) + (nCartons * 9);
 		

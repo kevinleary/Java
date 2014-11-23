@@ -20,8 +20,8 @@ public class Tester {
 		System.out.print("Enter how many jars of Jam you want (1lb 5oz): ");
 		double jars = sc.nextDouble();
 		
-		if (jars / 12 >= 1)
-			System.out.println("You also get " + ((jars+11)/12) + " containers which each weigh (1lb 9oz)");
+		if (jars / 10 >= 1)
+			System.out.println("You also get " + ((jars+9)/10) + " containers which each weigh (1lb 9oz)");
 
 		System.out.println("Now to calculate the total cost...");
 		

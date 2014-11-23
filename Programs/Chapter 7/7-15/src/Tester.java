@@ -10,7 +10,7 @@ Excercise: 15
 */
 public class Tester {
 	
-	 static int bp, nb;
+	 private static int bp, nb;
 	
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
@@ -41,7 +41,7 @@ public class Tester {
 				nb+=1;
 		}
 		
-		if (b == 2){	//determines which book they want if the answer is 2
+		else if (b == 2){	//determines which book they want if the answer is 2
 			
 			System.out.println("Now which book would you like to buy?");
 			System.out.println("Enter 1 for 'Be Prepared' Enter 2 for 'Next Best' Or Enter 3 for the deal pack: ");
@@ -59,9 +59,13 @@ public class Tester {
 				
 		}
 			
+		else {
+			bp = b + bp;
+		
+		}
 		Order o = new Order();
 		
-		o.getOrderTotal(bp, nb);
+		System.out.printf("\nThe total price for the amount of books you ordered is $%.2f", o.getOrderTotal(bp, nb));
 				
 		}
 }
