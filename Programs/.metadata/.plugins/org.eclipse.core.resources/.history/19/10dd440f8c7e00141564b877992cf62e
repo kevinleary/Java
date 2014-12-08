@@ -1,0 +1,25 @@
+
+public class Time {
+	
+	private int hours, mins;
+	public Time(int h, int m){
+		
+	}
+	
+	private int toMins(){
+		
+	}
+	
+	public boolean lessThan(Time t){
+		
+	}
+	
+	public elapsedSince(Time t){
+		
+	}
+	
+	public toString(){
+		
+	}
+	
+}

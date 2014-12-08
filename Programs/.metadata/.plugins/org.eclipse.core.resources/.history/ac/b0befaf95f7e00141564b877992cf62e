@@ -1,0 +1,35 @@
+import java.lang.Math;
+/*
+
+Kevin Leary
+Period 2
+Date: 12/7/14
+Chapter: 9
+Excercise: 10
+
+*/
+
+public class Rectangle {
+	
+	public int width, height, size, square;
+	
+	public Rectangle(int width, int height){
+		if (width >= 0 && height >= 0)
+			size = height * width;
+	}
+	
+	public Rectangle(int width){
+		size = width * width;
+	}
+	
+	public Rectangle(){
+		size = 1;
+	}
+	
+	public boolean isSquare(int size){
+		if (size == Math.sqrt(size) * Math.sqrt(size))
+			return true;
+		else
+			return false;
+	}
+}

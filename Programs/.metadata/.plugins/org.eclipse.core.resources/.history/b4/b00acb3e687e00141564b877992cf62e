@@ -1,0 +1,35 @@
+import java.lang.Math;
+
+
+public class Rectangle {
+	
+	public int width, height, size, square;
+	
+	public Rectangle(int width, int height){	//rectangle
+		if (width >= 0 && height >= 0)
+			size = height * width;
+	}
+	
+	public Rectangle(int width){		//square 
+		size = width * width;
+	}
+	
+	public Rectangle(){		//builds small square 
+		size = 1;
+	}
+	
+	public boolean isSquare(int size, int width){
+		if (width == Math.sqrt(size))
+			return true;
+		else
+			return false;
+	}
+	
+	public void Quadratize(int size){
+		//takes any size and makes it a square
+		width = (int) Math.sqrt(size);
+		
+	}
+
+
+}
