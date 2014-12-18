@@ -31,9 +31,20 @@ public class Complex {
 		return new Complex((acomp + other.acomp) + (bcomp + other.bcomp));
 	}
 	
+	//overloaded add with double instead of complex
+	public Complex add(double other){
+		
+		return new Complex((acomp + this.acomp) + (bcomp + this.bcomp));
+	}
+	
 	public String toString(){
 		
 		return String.valueOf(acomp);
+	}
+	
+	public Complex multiply(Complex other){
+		
+		return new Complex((acomp + other.acomp) * (bcomp * other.bcomp));
 	}
 	
 	
