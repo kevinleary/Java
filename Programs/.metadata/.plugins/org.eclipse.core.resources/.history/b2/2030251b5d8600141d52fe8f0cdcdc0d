@@ -13,28 +13,16 @@ public class SoccerTeam {
 	
 	public void played(SoccerTeam other, int myScore, int otherScore, int totgames, int totgoals){
 		
-		if (myScore > otherScore)
-			wins++;
-		else if (myScore < otherScore)
-			losses++;
-		else {
-			ties++;
-		}
-		
-		totgoals = myScore + otherScore;
-		totgames = wins + ties + losses;
 		
 	}
 	
 	public int getPoints(int wins, int ties){
 		
-		return (wins * 2) + ties;
+		
 	}
 	
 	public void reset(int wins, int losses, int ties){
-		wins = 0;
-		losses = 0;
-		ties = 0;
+		
 	}
 	
 	public static int getGames(int totgames){

@@ -32,7 +32,7 @@ public class SoccerTeam {
 	}
 	
 	public void reset(int wins, int losses, int ties){
-		wins = 0;
+		wins =0;
 		losses = 0;
 		ties = 0;
 	}
