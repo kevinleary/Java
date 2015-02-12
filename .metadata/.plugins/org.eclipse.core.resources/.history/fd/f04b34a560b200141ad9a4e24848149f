@@ -1,0 +1,10 @@
+
+public class WelcomeEnglish implements WelcomeMessage{
+
+	
+	public String getWelcomeMessage() {
+		
+		return "Hello!";
+	}
+
+}
