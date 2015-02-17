@@ -1,0 +1,9 @@
+
+public interface HighwayVehicle {
+	
+	public String getVehicleType();
+		
+	
+	public int getMaxPassengers();
+	
+}

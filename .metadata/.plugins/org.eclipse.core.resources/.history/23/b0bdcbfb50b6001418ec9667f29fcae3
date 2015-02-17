@@ -1,0 +1,14 @@
+/*
+
+Kevin Leary
+Period 2
+Date: 2/16/14
+Chapter: 11
+Excercise: THE RACE
+
+*/
+
+
+public class PeopleMoverRace implements HighwayVehicle, RaceCourse{
+
+}

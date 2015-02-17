@@ -1,0 +1,11 @@
+
+public interface HighwayVehicle {
+	
+	public String VehicleType(){
+		
+	}
+	
+	public int getMaxPassengers(){
+		
+	}
+}
