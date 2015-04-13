@@ -3,22 +3,18 @@
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
-
 import java.util.Random;
 import java.util.Arrays;
 
-@SuppressWarnings("serial")
 public class Benchmarks extends JFrame
 {
   private static int numberOfRuns = 20;
- 
+
   private JTextField arraySizeInput, display;
   private String sortMethodNames[] =
      {"Selection Sort", "Insertion Sort", "Mergesort", "Quicksort", "Arrays.sort"};
-  @SuppressWarnings("rawtypes")
-private JComboBox chooseSortMethod;
+  private JComboBox chooseSortMethod;
 
   private final long seed;
   private int arraySize;
@@ -64,46 +60,45 @@ private JComboBox chooseSortMethod;
   //     4 -- Quicksort
   // This is repeated numberOfRuns times for better accuracy
   // Returns the total time it took in milliseconds.
-  
   private long runSort(double[] a, int sortMethod, int numberOfRuns)
-
   {
+	  
+	  Random randomGenerator = new Random(seed);
 
-    Random randomGenerator = new Random(seed);
+	    long totalTime = 0;
 
-    long totalTime = 0;
+	    for (int run = 1; run <= numberOfRuns; run++)
 
-    for (int run = 1; run <= numberOfRuns; run++)
+	    {
 
-    {
+	      for (int k = 0; k < a.length; k++)
 
-      for (int k = 0; k < a.length; k++)
+	        a[k] = randomGenerator.nextDouble();
 
-        a[k] = randomGenerator.nextDouble();
+	       long startTime = System.currentTimeMillis();
 
-       long startTime = System.currentTimeMillis();
+	       switch (sortMethod)
 
-       switch (sortMethod)
+	      {
 
-      {
+	        case 1: SelectionSort.sort(a); break;
 
-        case 1: SelectionSort.sort(a); break;
+	        case 2: InsertionSort.sort(a); break;
 
-        case 2: InsertionSort.sort(a); break;
+	        case 3: Mergesort.sort(a); break;
 
-        case 3: Mergesort.sort(a); break;
+	        case 4: Quicksort.sort(a); break;
 
-        case 4: Quicksort.sort(a); break;
+	        case 5: Arrays.sort(a); break;		
 
-        case 5: Arrays.sort(a); break;
+	      }
 
-      }
+	       totalTime += (System.currentTimeMillis() - startTime);
 
-       totalTime += (System.currentTimeMillis() - startTime);
+	    }
 
-    }
-
-     return totalTime;
+	     return totalTime;
+  }
 
   // Handles Run button events
   private class RunButtonListener implements ActionListener

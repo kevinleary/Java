@@ -53,41 +53,42 @@ public class Sort {
 		
 	}
 	
-	public static void mSort(double[] a){
-		
+	public double[] mSort(double[] a){		//i managed to fixed this because i realized that...
+										//my variable names were all screwed up
 		int n = a.length;
 		temp = new double[n];
-		mergeSort(a,  0,  n - 1);		
+		mergeSort(a,  0,  n - 1);	
+		return a;
 	}
 	
-	public static void mergeSort(double[] a ,  int left, int right){			//merge sort
+	public static void mergeSort(double[] a ,  int from, int to){			//merge sort
 		
-		if (right - left < 2){							//recursively splits the arrays
+		if (to - from < 2){							//recursively splits the arrays
 			
-			if (right > left && a[right] < a[left]){
+			if (to > from && a[to] < a[from]){
 				
-				double aTemp = a[right]; 
-				a[right] = a[left];
-				a[left] = aTemp;
+				double aTemp = a[to]; 
+				a[to] = a[from];
+				a[from] = aTemp;
 			}
 		}
 		
 		else 
 		{
-			int middle = (left + right) / 2;
-			mergeSort(a, left, middle);
-			mergeSort(a, middle + 1, right);	
-			merge(a, left, middle, right);
+			int middle = (from + to) / 2;
+			mergeSort(a, from, middle);
+			mergeSort(a, middle + 1, to);	
+			merge(a, from, middle, to);
 			
 		}
 		
 	}
 	
-	public static void merge(double[] a,  int left, int right, int rightEnd){
+	public static void merge(double[] a,  int from, int middle, int to){
 		
-		int i = left, j = right + 1, k = rightEnd;		//method merges both of the arrays into one single one 
+		int i = from, j = middle + 1, k = from;		//method merges both of the arrays into one single one 
 		
-		while (i <= right && j <= left){
+		while (i <= middle && j <= to){
 			
 			if (a[i] < a[j]){
 				temp[k] = a[i];
@@ -101,19 +102,19 @@ public class Sort {
 			k++;
 		}
 		
-		while (i <= right){
+		while (i <= middle){
 			temp[k] = a[i];
 			i++;
 			k++;
 		}
 		
-		while (j <= left){
+		while (j <= to){
 			temp[k] = a[j];
 			j++;
 			k++;
 		}
 		
-		for (k = left; k <= right; k++)
+		for (k = from; k <= to; k++)
 			a[k] = temp[k];
     }
 	

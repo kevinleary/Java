@@ -28,7 +28,11 @@ public class SortTester {
 		
 		//merge sort
 		System.out.println("The original array for the merge sort is " + Arrays.toString(arr3));
-		//Sort.mSort((arr3));			//it wont print for some reason going to have to ask for your help
+		Sort ms = new Sort();
+		
+		ms.mSort(arr3);
+		
+		//Sort.mSort((arr3));			
 		System.out.println("The array sorted using merge sort is " + Arrays.toString(arr3));
 		System.out.println();
 		
