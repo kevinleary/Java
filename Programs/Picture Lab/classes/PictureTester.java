@@ -21,8 +21,8 @@ public class PictureTester
   public static void testMirrorVertical()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVertical();
+    //caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
   }
   
@@ -30,7 +30,7 @@ public class PictureTester
   public static void testMirrorTemple()
   {
     Picture temple = new Picture("temple.jpg");
-    temple.explore();
+    //temple.explore();
     temple.mirrorTemple();
     temple.explore();
   }
@@ -51,6 +51,58 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testKeepOnlyBlue(){
+	  
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.keepOnlyBlue();
+	  seagull.explore();
+  }
+  
+  public static void testNegate(){
+	  
+	  Picture flower1 = new Picture("flower1.jpg");
+	  flower1.negate();
+	  flower1.explore();
+  }
+  
+  public static void testGrayscale(){
+	  
+	  Picture redmotorcycle = new Picture("redmotorcycle.jpg");
+	  redmotorcycle.grayscale();
+	  redmotorcycle.explore();
+  }
+  
+  public static void testFixUnderwater(){
+	  
+	  Picture water = new Picture("water.jpg");
+	  water.fixUnderwater();
+	  water.explore();
+  }
+  
+  public static void testMirrorHorizontal(){
+	  
+	  Picture caterpillar = new Picture("caterpillar.jpg");
+	   //caterpillar.explore();
+	   caterpillar.mirrorHorizontal();
+	   caterpillar.explore();
+	   
+  }
+  
+  public static void testMirrorHorizontalTopToBot(){
+	  
+	  Picture gorge = new Picture("gorge.jpg");
+	   gorge.mirrorHorizontalTopToBot();
+	   gorge.explore();
+	   
+  }
+  
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,16 +110,18 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
+   // testMirrorVertical();
+    //testMirrorHorizontal();
+	//testMirrorHorizontalTopToBot();
+   // testMirrorTemple();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();

@@ -141,8 +141,7 @@ public class IntArrayWorker
 	  
 	  for (int row = 0; row < matrix.length; row++)
 	    {
-	      for (int col = 0; col < matrix[0].length; 
-	           col++)
+	      for (int col = 0; col < matrix[0].length; col++)
 	      {
 	         if(c == col){
 	        	 totalcol = totalcol + matrix[row][col];
